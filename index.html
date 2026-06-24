@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장비 부품 및 보험 청구 프로세스 인포그래픽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; }
+        
+        /* 스크롤바 커스텀 */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* 애니메이션 효과 */
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased py-8 px-4 md:px-8">
+
+    <div class="max-w-6xl mx-auto fade-in">
+        <!-- Header Section -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+                <i class="fa-solid fa-microscope text-blue-600 mr-2"></i>장비 부품 및 보험 청구 프로세스
+            </h1>
+            <p class="text-slate-500 text-lg">담당자 간 업무 흐름 및 협업 가이드 (총 13단계)</p>
+        </div>
+
+        <!-- Legend (범례) -->
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 bg-white p-4 rounded-xl shadow-sm border border-slate-100">
+            <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-blue-500 shadow-sm"></span>
+                <span class="font-semibold text-slate-700">각 담당자 (실무자)</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-purple-500 shadow-sm"></span>
+                <span class="font-semibold text-slate-700">팀장 (결재/관리)</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-emerald-500 shadow-sm"></span>
+                <span class="font-semibold text-slate-700">자산관리 담당자</span>
+            </div>
+        </div>
+
+        <!-- Swimlane Board -->
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+            
+            <!-- Table Header (PC Only) -->
+            <div class="hidden md:grid grid-cols-12 bg-slate-100 border-b border-slate-200 text-center font-bold text-slate-600 py-4">
+                <div class="col-span-1">순서</div>
+                <div class="col-span-5 text-blue-700">각 담당자</div>
+                <div class="col-span-3 text-purple-700">팀장</div>
+                <div class="col-span-3 text-emerald-700">자산관리 담당자</div>
+            </div>
+
+            <div class="divide-y divide-slate-100">
+
+                <!-- Phase 1 -->
+                <div class="bg-slate-800 text-white py-2 px-4 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-flag text-yellow-400"></i> Phase 1. 초기 청구 및 사전 검토
+                </div>
+
+                <!-- Step 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">1</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900"><i class="fa-solid fa-toolbox mr-2 opacity-70"></i>부품 청구 및 결재 상신</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">2</span>
+                    </div>
+                    <div class="hidden md:block col-span-5"></div>
+                    <div class="col-span-1 md:col-span-3">
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-purple-600 mb-1 block">팀장</span>
+                            <div class="font-medium text-purple-900"><i class="fa-solid fa-ban mr-2 text-red-500"></i>부품청구 반려</div>
+                            <div class="text-xs text-purple-700 mt-1">(보험청구가 필요한 경우)</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-3"></div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-slate-800 text-white py-2 px-4 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-file-contract text-yellow-400"></i> Phase 2. 보험청구 접수 및 승인
+                </div>
+
+                <!-- Step 3 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-start hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block mt-2">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">3</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <ul class="space-y-3 text-sm text-blue-900">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-blue-500 mt-0.5"></i>
+                                    <span>부서에 <strong>손망실보고서</strong>(전자결재 의공학팀 양식) 작성 요청<br>
+                                    <a href="https://chatgpt.com/g/g-69ba2bd7d7788191ad214198a0d53dee-boheom-pandan-mic-sonmangsilbogoseo-jagseong" target="_blank" rel="noopener noreferrer" class="inline-block mt-1 text-xs bg-yellow-100 hover:bg-yellow-200 text-yellow-800 px-2 py-1 rounded transition-colors shadow-sm border border-yellow-200 cursor-pointer font-medium"><i class="fa-solid fa-arrow-up-right-from-square mr-1 text-[10px]"></i>*GPT지침 참조하여 문구 작성요청</a></span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-paper-plane text-blue-500 mt-0.5"></i>
+                                    <span><strong>총무팀에 보험청구 협조전 발송</strong><br>
+                                    <span class="text-xs text-slate-500">(첨부: 보험청구서, 손망실보고서, 장비 서비스 레포트, 수리 견적서)</span></span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-user-plus text-blue-500 mt-0.5"></i>
+                                    <span>결재라인에 <strong>자산관리 담당자 포함</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">4</span>
+                    </div>
+                    <div class="hidden md:block col-span-8"></div>
+                    <div class="col-span-1 md:col-span-3">
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-emerald-600 mb-1 block">자산관리 담당자</span>
+                            <div class="font-medium text-emerald-900 text-sm">
+                                <i class="fa-solid fa-file-signature mr-2 opacity-70"></i>보험청구 결재라인 결재 후<br>
+                                <span class="bg-white px-2 py-1 rounded text-emerald-800 border border-emerald-200 inline-block mt-2">
+                                    KIS 장비명 ➔ <strong>자산명+$</strong> 로 변경
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">5</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900">
+                                <i class="fa-solid fa-rotate-right mr-2 opacity-70"></i>부품 청구 결재 재상신<br>
+                                <span class="text-xs text-blue-700 font-normal mt-1 block">(부품청구서 + 보험청구 협조전 첨부)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-slate-800 text-white py-2 px-4 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-users-gear text-yellow-400"></i> Phase 3. 팔로우업 및 손해사정 현장 대응
+                </div>
+
+                <!-- Step 6 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors bg-emerald-50/30">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">6</span>
+                    </div>
+                    <div class="hidden md:block col-span-8"></div>
+                    <div class="col-span-1 md:col-span-3">
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg shadow-sm relative">
+                            <span class="absolute -top-3 -right-2 bg-emerald-500 text-white text-xs px-2 py-1 rounded-full font-bold shadow">연 1회</span>
+                            <span class="md:hidden text-xs font-bold text-emerald-600 mb-1 block">자산관리 담당자</span>
+                            <div class="font-medium text-emerald-900 text-sm"><i class="fa-regular fa-envelope mr-2 opacity-70"></i>총무팀에 리스트 메일 발송하여 진행사항 확인</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">7</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900 text-sm"><i class="fa-solid fa-file-lines mr-2 opacity-70"></i>손해사정사가 요청하는 서류 작성 및 제출</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">8</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900 text-sm"><i class="fa-solid fa-people-arrows mr-2 opacity-70"></i>손해사정사 현장 대응<br>
+                            <span class="text-xs text-blue-700 font-normal mt-1 block">(사고경위 설명 및 장비 상태 확인 지원)</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">9</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900 text-sm"><i class="fa-solid fa-folder-plus mr-2 opacity-70"></i>추가 보완자료 요청 시 대응<br>
+                            <span class="text-xs text-blue-700 font-normal mt-1 block">(사진, 로그, 사용기록 등 제출)</span></div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="bg-slate-800 text-white py-2 px-4 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-check-double text-yellow-400"></i> Phase 4. 보험금 정산 및 사후 종결
+                </div>
+
+                <!-- Step 10 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">10</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900 text-sm"><i class="fa-solid fa-calculator mr-2 opacity-70"></i>보험금 산정 결과 확인 및 이의 여부 검토</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 11 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">11</span>
+                    </div>
+                    <div class="col-span-1 md:col-span-5">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg shadow-sm">
+                            <span class="md:hidden text-xs font-bold text-blue-600 mb-1 block">각 담당자</span>
+                            <div class="font-medium text-blue-900 text-sm"><i class="fa-solid fa-file-circle-check mr-2 opacity-70"></i>보험금 지급 진행 확인 및 완료 전자결재 작성</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-6"></div>
+                </div>
+
+                <!-- Step 12 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-200 text-slate-600 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto">12</span>
+                    </div>
+                    <div class="hidden md:block col-span-5"></div>
+                    <div class="col-span-1 md:col-span-3">
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-r-lg shadow-sm h-full">
+                            <span class="md:hidden text-xs font-bold text-purple-600 mb-1 block">팀장</span>
+                            <div class="font-bold text-purple-900"><i class="fa-solid fa-stamp mr-2 text-purple-600"></i>최종결재</div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block col-span-3"></div>
+                </div>
+
+                <!-- Step 13 -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 items-center hover:bg-slate-50 transition-colors bg-slate-50">
+                    <div class="col-span-1 md:text-center font-bold text-slate-400 flex items-center gap-2 md:block">
+                        <span class="bg-slate-300 text-slate-700 rounded-full w-8 h-8 flex items-center justify-center text-sm md:mx-auto shadow-sm">13</span>
+                    </div>
+                    <div class="hidden md:block col-span-8"></div>
+                    <div class="col-span-1 md:col-span-3">
+                        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg shadow-sm h-full">
+                            <span class="md:hidden text-xs font-bold text-emerald-600 mb-1 block">자산관리 담당자</span>
+                            <div class="font-bold text-emerald-900"><i class="fa-solid fa-database mr-2 text-emerald-600"></i>자산대장/처리결과 최종 반영</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- 하단 안내 및 참고사항 영역 (통합) -->
+        <div class="mt-8 bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden fade-in">
+            <!-- Header -->
+            <div class="bg-slate-50 border-b border-slate-200 px-5 py-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-blue-500"></i>
+                <span class="font-bold text-slate-700 text-sm">일러두기 및 참고사항</span>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-5 flex flex-col gap-5">
+                <!-- 일반 안내 -->
+                <div class="flex items-start gap-3">
+                    <div class="mt-0.5 bg-blue-100 text-blue-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="text-sm text-slate-600 pt-0.5 leading-relaxed">
+                        <strong>각 담당자, 팀장, 자산관리 담당자</strong> 간의 원활한 업무 협조 및 흐름 파악을 위한 프로세스 맵입니다. 각 단계별 주체와 업무 내역을 명확히 확인해 주세요.
+                    </div>
+                </div>
+                
+                <!-- GPT 안내 -->
+                <div class="flex items-start gap-3">
+                    <div class="mt-0.5 bg-emerald-100 text-emerald-600 w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="text-sm text-slate-600 w-full pt-0.5">
+                        <p class="mb-2 leading-relaxed">
+                            <strong>3단계</strong>의 <span class="inline-block align-middle bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-[11px] mx-1 border border-yellow-200"><i class="fa-solid fa-arrow-up-right-from-square mr-1 text-[10px]"></i>*GPT지침 참조하여 문구 작성요청</span> 버튼을 클릭하시면, 손망실보고서 작성을 돕는 맞춤형 GPTs 채널로 즉시 연결됩니다.
+                        </p>
+                        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 text-[13px] flex items-center gap-3 break-all transition-colors hover:bg-slate-100 shadow-inner">
+                            <i class="fa-solid fa-link text-slate-400"></i>
+                            <a href="https://chatgpt.com/g/g-69ba2bd7d7788191ad214198a0d53dee-boheom-pandan-mic-sonmangsilbogoseo-jagseong" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline font-medium">
+                                https://chatgpt.com/g/g-69ba2bd7d7788191ad214198a0d53dee-boheom-pandan-mic-sonmangsilbogoseo-jagseong
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
